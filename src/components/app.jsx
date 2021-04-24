@@ -3,7 +3,7 @@ import Header from "./header";
 import Note from "./note";
 import Footer from "./footer";
 import notes from "../notes";
-
+ 
 function App() {
   return (
     <div>
