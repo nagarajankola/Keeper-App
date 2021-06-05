@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
+import "../style.css";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -23,7 +24,12 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    if (note.content === "" || note.title === "") {
+      window.alert("Fields can't be empty")
+    }else{
+
+      props.onAdd(note);
+    }
     setNote({
       title: "",
       content: ""
